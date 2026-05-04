@@ -42,7 +42,13 @@ graph TD
     Forecast --> GridSlider[Horizontal Scroll Container]
 ```
 
-## 5. File Structure
+## 5. Architectural Highlights
+- **Bento Grid**: A custom CSS Grid system (`grid-template-columns: repeat(4, 1fr)`) designed for high information density and responsive fluidity.
+- **Dynamic CSS Environments**: Application background and card orbs react dynamically to weather condition codes (Sunny, Cloudy, etc.).
+- **Debounce Logic**: `useWeather` hook implements a 500ms debounce ref to prevent API rate-limiting during active typing.
+- **Error Resiliency**: Custom `WeatherApiError` class provides granular feedback for 401 (API key), 404 (City not found), and 429 (Limits) statuses.
+
+## 6. File Structure
 ```text
 /src
  ├── /api
