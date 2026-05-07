@@ -1,4 +1,4 @@
-import { CurrentWeather, ForecastResponse, ForecastItem } from '../types/weather.types';
+import { CurrentWeather, ForecastItem } from '../types/weather.types';
 
 export class WeatherApiError extends Error {
   constructor(public message: string, public statusCode: number) {
